@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configurações do Telegram
-TOKEN="7293859892:AAHE2WhyllMXZe1DDqsb_AdC0JvjwNbBEBM"
-CHAT_ID="-1002302976235"
+TOKEN="7293859892:AAHE2WhyllMXZe1DDqsb_AdC0JvjwNbBEBX"
+CHAT_ID="-1002302976435"
 
 # Função para registrar o último alerta e enviar somente se necessário
 enviar_alerta() {
