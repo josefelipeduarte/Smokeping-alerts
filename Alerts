@@ -1,0 +1,52 @@
+*** Alerts ***
+to = |/opt/smokeping/script.sh
+from = smokeping@example.com
+
+#Nesta pagina é utilizada verificação com pattern do smokeping.
+#Você utiliza por exemplo pattern = >70,>70,>70, significa que se em 3 verificações constantes.
+#Significa que (15 minutos consecutivos) está acontecendo o problema.
+
+# This rule checks for 3 periods (3 * 5min default) where
+# the rtt is >30ms
++latencia_alta
+type = rtt
+# in milli seconds
+pattern = >30,>30,>30
+edgetrigger = yes
+comment = On backup circuit maybe?
+
+# Trigger destinada aos DNS - Resolução de sites conhecidos.
+# This rule checks for one period (2 * 5mins) of > 5% loss
+# se detectado em duas verificações seguidas perca de pacote > 5% alerta.
++Perca_de_Pacotes
+type = loss
+# in percent
+pattern = >5%,>5%
+edgetrigger = yes
+comment = Perca de > 5% 5 minutos.
+
+
+## PARTE ABAIXO DESTINADA AOS DNS
+
+# Trigger destinada aos DNS - Resolução de sites conhecidos.
+# This rule checks for one period (2 * 5mins) of > 5% loss
+# se detectado em duas verificações seguidas perca de pacote > 5% alerta.
++Perca_de_Pacotes_DNS
+type = loss
+# in percent
+pattern =  >5%,>5%
+edgetrigger = yes
+comment = Perca de 2 periodos > 5%
+
+
+
+
+# This rule checks for 3 periods (3 * 5min default) where
+# the rtt is >30ms
++latencia_DNS
+type = rtt
+# in milli seconds
+pattern = >30,>30,>30
+edgetrigger = yes
+comment = Latencia alta demais?
+
