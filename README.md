@@ -76,6 +76,14 @@ comment = Latencia alta demais?
 
 
 
+## PERGUNTAS E RESPOSTAS
+
+#### Como criar um BOT no telegram para usar na API?
+
+- [Clique aqui](https://engage.sinch.com/pt-br/blog/como-criar-um-bot-do-telegram/#:~:text=Como%20criar%20e%20adicionar%20um%20bot%20ao%20Telegram,-Se%20você%20quer&text=Para%20usar%20o%20BotFather%2C%20basta,alguns%20comandos%20úteis%20em%20%2Fhelp.)
+
+
+
 ## Referência
 
  - [Api Telegram](https://core.telegram.org/)
